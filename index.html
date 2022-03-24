@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+
+    <script src="main.js" defer></script>
+
+    <title>Frontend Mentor | Interactive rating component</title>
+  </head>
+  <body>
+    <main>
+      <h1 class="sr-only">feedback</h1>
+      <article class="card box stack center">
+        <figure class="fcc"><img src="images/icon-star.svg" alt="" /></figure>
+
+        <div class="card__content">
+          <h2>How did we do?</h2>
+          <p>
+            Please let us know how we did with your support request. All
+            feedback is appreciated to help us improve our offering!
+          </p>
+        </div>
+        <form id="form" class="form" action="">
+          <fieldset class="form__grade cluster">
+            <legend class="sr-only">Choose a rating</legend>
+            <!-- Rating state start -->
+
+            <span>
+              <input
+                class="sr-only"
+                type="radio"
+                name="rating"
+                id="1"
+                value="1"
+                required
+              />
+              <label class="grade fcc" for="1"
+                >1 <span class="sr-only">out of 5 </span></label
+              >
+            </span>
+            <span>
+              <input
+                class="sr-only"
+                type="radio"
+                name="rating"
+                id="2"
+                value="2"
+              />
+              <label class="grade fcc" for="2"
+                >2 <span class="sr-only">out of 5 </span></label
+              >
+            </span>
+            <span>
+              <input
+                class="sr-only"
+                type="radio"
+                name="rating"
+                id="3"
+                value="3"
+              />
+              <label class="grade fcc" for="3"
+                >3 <span class="sr-only">out of 5 </span></label
+              >
+            </span>
+            <span>
+              <input
+                class="sr-only"
+                type="radio"
+                name="rating"
+                id="4"
+                value="4"
+              />
+              <label class="grade fcc" for="4"
+                >4 <span class="sr-only">out of 5 </span></label
+              >
+            </span>
+            <span>
+              <input
+                class="sr-only"
+                type="radio"
+                name="rating"
+                id="5"
+                value="5"
+              />
+              <label class="grade fcc" for="5"
+                >5 <span class="sr-only">out of 5 </span></label
+              >
+            </span>
+
+            <!-- Rating state end -->
+          </fieldset>
+          <button class="form__button" type="submit">Submit</button>
+        </form>
+      </article>
+
+      <article class="card box stack center display:none" aria-live="polite">
+        <!-- Thank you state start -->
+        <img class="center" src="images/illustration-thank-you.svg" alt="" />
+
+        <p class="grade-sentence">
+          You selected <span id="value"></span> out of 5
+        </p>
+        <div class="card__content text-align:center">
+          <h2>Thank you!</h2>
+          <p>
+            We appreciate you taking the time to give a rating. If you ever need
+            more support, don’t hesitate to get in touch!
+          </p>
+        </div>
+
+        <!-- Thank you state end -->
+      </article>
+    </main>
+  </body>
+</html>

@@ -100,6 +100,28 @@ p, h1, h2, h3, h4, h5, h6 {
     --fw-bold: 700;
 }
 
+.stack {
+    display: flex;
+    flex-direction: column;
+    justify-content: var(--vertical-alignment, flex-start);
+
+    
+}
+
+.stack > * + * {
+        margin-block-start: var(--margin-block-start, 1.5rem);    
+}
+
+.box {
+    color: var(--color);
+    background-color: var(--background-color);
+    border: var(--border);
+    border-radius: var(--border-radius);
+    padding: var(--padding);
+    outline: var(--outline);
+    outline-offset: var(--outline-offset);
+}
+
 body {
     font-family: 'Overpass', sans-serif;
 }

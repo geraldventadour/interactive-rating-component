@@ -122,6 +122,122 @@ p, h1, h2, h3, h4, h5, h6 {
     outline-offset: var(--outline-offset);
 }
 
+.center {
+    box-sizing: content-box;
+    margin-inline: auto;
+    text-align: var(--text-align);
+    max-inline-size: var(--max-inline-size);
+    padding-inline-start: var(--padding-inline);
+    padding-inline-end: var(--padding-inline);
+}
+
+.cluster {
+    display: flex;
+    flex-wrap: var(--flex-wrap, wrap);
+    column-gap: var(--column-gap);
+    row-gap: var(--row-gap);
+    justify-content: var(--horizontal-alignment, center);
+    align-items: var(--vertical-alignment, center);
+}
+
+.visually-hidden {
+    clip: rect(1px, 1px, 1px, 1px);
+    clip-path: inset(50%);
+    height: 1px;
+    width: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+  }
+
 body {
     font-family: 'Overpass', sans-serif;
+    --background-color: var(--color-very-dark-blue);
+    --vertical-alignment: center;
+    --color:var(--color-light-grey)
 }
+
+main {
+    --max-inline-size:25.75rem;
+}
+
+.card {
+    --padding: 2rem;
+    background: radial-gradient(98.96% 98.96% at 50% 0%, #232A34 0%, #181E27 100%);;
+    --border-radius:2rem;
+}
+
+
+
+figure,label {
+    background-color: #262E38; 
+    border-radius: 50%;
+}
+
+figure {
+    align-self: flex-start;
+    padding: 1rem;
+}
+
+
+h1,button {
+    color: var(--color-white);
+    font-weight: var(--fw-bold);
+}
+
+
+fieldset {
+    padding: 0;
+    border: none;
+}
+
+.radio-buttons {
+    --horizontal-alignment: space-between;
+}
+
+.radio-buttons:focus-within {
+    outline: .25em dashed var(--color-primary);
+    outline-offset: .5em;
+}
+
+label {
+    padding: 1em 1.5em;
+    cursor: pointer;
+    font-weight: var(--fw-bold);
+    color: var(--color-medium-grey);
+}
+
+label:hover, input:focus + label{
+    background-color: var(--color-primary);
+    color: var(--color-white);
+}
+
+input:checked + label {
+    background-color: var(--color-medium-grey);
+    color: var(--color-white);
+}
+
+button {
+    background-color: var(--color-primary);
+    border-radius: 1.5em;
+    border-color: transparent;
+    text-transform: uppercase;
+    padding-block: .5em;
+    cursor: pointer;
+    letter-spacing: .125em;
+}
+
+button:hover,button:focus {
+    color: var(--color-primary);
+    background-color: var(--color-white);
+    
+}
+
+button:focus {
+    outline: .25em dashed var(--color-primary);
+    outline-offset: .5em;
+}
+
+
+
